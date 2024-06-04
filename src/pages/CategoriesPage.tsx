@@ -9,11 +9,6 @@ const CategoriesPage = () => {
     const dispatch = useAppDispatch();
     const categories = useAppSelector((state: RootState) => state.category.category);
     const selectedLanguage = getSelectedLanguage();
-    // const categoriesWithSelectedLanguage = data.map((category: any) => ({
-    //     ...category,
-    //     title: category[`title_${selectedLanguage}`],
-    // }));
-
     useEffect(() => {
         dispatch(fetchCategory());
     }, [dispatch]);
@@ -27,8 +22,6 @@ const CategoriesPage = () => {
         <div>
             {categories.map((category: CategoryType) => (
                 <div key={category.id}>
-                    {/* <img src={category.image} alt={category.title} /> */}
-                    {/* <h1>{category.title}</h1> */}
                     <h1>{`${category.title_}${selectedLanguage}`}</h1>
                 </div>
             ))}
