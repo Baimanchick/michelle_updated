@@ -6,7 +6,6 @@ export interface CategoryType {
   title_tu: string;
   title_kg: string;
   title_en: string;
-  title_: string;
   link: string;
 }
 

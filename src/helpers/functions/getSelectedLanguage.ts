@@ -1,3 +1,3 @@
 export const getSelectedLanguage = () => {
-  return localStorage.getItem("selectedLanguage") || "ru";
+  return localStorage.getItem("selectedLanguage") || "Русский";
 };

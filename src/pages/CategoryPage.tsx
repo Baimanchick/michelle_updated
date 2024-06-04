@@ -1,0 +1,42 @@
+import React, { useEffect, useState } from 'react';
+import { RootState } from '../store/store';
+import { fetchCategory } from '../store/features/category/categoriesSlice';
+import { CategoryType } from '../helpers/interfaces/categories.interface';
+import { useAppDispatch, useAppSelector } from '../hooks/hooks';
+import getCategoryTitleByLanguage from '../helpers/functions/getCategoryTitleByLanguage';
+import CategoryList from '../components/CategoryList/CategoryList';
+import { Flex } from 'antd';
+
+const CategoryPage = () => {
+    const dispatch = useAppDispatch();
+    const categories = useAppSelector((state: RootState) => state.category.category);
+
+    useEffect(() => {
+        dispatch(fetchCategory());
+    }, [dispatch]);
+
+    return (
+        <div>
+            <Flex align={'center'} justify={'center'} style={{ height: 100 }}>
+                <h1>MENU</h1>
+            </Flex>
+            <Flex style={{ paddingLeft: '10px', paddingRight: '10px' }} justify={'center'}>
+                <CategoryList
+                    categories={categories}
+                    grid={{
+                        gutter: 10,
+                        column: 3,
+                        xxl: 3,
+                        xl: 3,
+                        lg: 3,
+                        md: 3,
+                        sm: 3,
+                        xs: 3,
+                    }}
+                />
+            </Flex>
+        </div>
+    );
+};
+
+export default CategoryPage;
