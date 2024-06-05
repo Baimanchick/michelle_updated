@@ -3,13 +3,13 @@ import $axios from "../../../utils/axios";
 import { AxiosError } from "axios";
 import {
   CategoryType,
-  SubCategory,
+  SubCategoryType,
 } from "../../../helpers/interfaces/categories.interface";
 import { API_URL } from "../../../utils/consts";
 
 interface CategoryState {
   category: CategoryType[];
-  subcategories: SubCategory[];
+  subcategories: SubCategoryType[];
 }
 
 const initialState: CategoryState = {
@@ -29,7 +29,7 @@ const categoryCardlSlice = createSlice({
     },
     setSubcategories: (
       state: CategoryState,
-      action: PayloadAction<SubCategory[]>
+      action: PayloadAction<SubCategoryType[]>
     ) => {
       state.subcategories = action.payload;
     },
@@ -42,7 +42,6 @@ export const fetchCategory = createAsyncThunk<unknown, void>(
     try {
       const { data } = await $axios.get(`${API_URL}/categories/`);
       dispatch(categoryCardlSlice.actions.setCategory(data));
-      console.log(data);
     } catch (error) {
       if (error instanceof AxiosError) {
         return rejectWithValue(error.response!.data.message);

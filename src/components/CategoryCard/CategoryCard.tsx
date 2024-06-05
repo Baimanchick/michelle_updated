@@ -2,10 +2,24 @@ import { Card, Flex, Typography } from "antd"
 import getCategoryTitleByLanguage from "../../helpers/functions/getCategoryTitleByLanguage"
 import { CategoryCardProps } from "./CategoryCard.props"
 import styles from "./categoryCard.module.scss"
-
-const { Title } = Typography
+import { useNavigate } from "react-router-dom"
 
 function CategoryCard({ category }: CategoryCardProps) {
+    const navigate = useNavigate()
+    const navigateToDetail = (
+        e: React.MouseEvent<HTMLDivElement>,
+        id: number
+    ) => {
+        const target = e.target as HTMLElement;
+        e.stopPropagation();
+        if (e.currentTarget === target || e.target instanceof HTMLImageElement) {
+            navigate(`/dish/${id}`);
+        }
+    };
+    if (!category.id) {
+        return null;
+    }
+
     return (
         <Card
             cover={
@@ -13,6 +27,7 @@ function CategoryCard({ category }: CategoryCardProps) {
             }
             classNames={{ cover: styles.CustomCover, body: styles.CustomBody }}
             className={styles.CardCustom}
+            onClick={(e) => navigateToDetail(e, category.id)}
         >
             <Flex className={styles.TitleFlex} >
                 <div className={styles.CustomTitle}>{getCategoryTitleByLanguage(category)}</div>

@@ -1,5 +1,5 @@
 export interface CategoryType {
-  id?: number;
+  id: number;
   image: string;
   number: number;
   title_ru: string;
@@ -9,8 +9,9 @@ export interface CategoryType {
   link: string;
 }
 
-export interface SubCategory {
-  id?: number;
+export interface SubCategoryType {
+  map: any;
+  id: number;
   category_id?: number;
   image: string;
   number: number;

@@ -10,6 +10,12 @@ import { Flex } from 'antd';
 const CategoryPage = () => {
     const dispatch = useAppDispatch();
     const categories = useAppSelector((state: RootState) => state.category.category);
+    const sortCategoriesById = (categories: any) => {
+        return [...categories].sort((a, b) => a.id - b.id);
+    };
+
+    const sortedCategories = sortCategoriesById(categories);
+
 
     useEffect(() => {
         dispatch(fetchCategory());
@@ -22,7 +28,7 @@ const CategoryPage = () => {
             </Flex>
             <Flex style={{ paddingLeft: '10px', paddingRight: '10px' }} justify={'center'}>
                 <CategoryList
-                    categories={categories}
+                    categories={sortedCategories}
                     grid={{
                         gutter: 10,
                         column: 3,

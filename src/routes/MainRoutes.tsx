@@ -4,6 +4,8 @@ import MainLayout from '../layouts/MainLayout';
 
 const HomePage = lazy(() => import("../pages/HomePage"));
 const CategoryPage = lazy(() => import("../pages/CategoryPage"));
+const DishPage = lazy(() => import("../pages/DishPage"));
+
 
 
 
@@ -13,7 +15,7 @@ function MainRoutes() {
             <Route element={<MainLayout />}>
                 <Route path='/' element={<HomePage />} />
                 <Route path='/categories' element={<CategoryPage />} />
-
+                <Route path='/dish/:id' element={<DishPage />} />
             </Route>
         </Routes>
     )
