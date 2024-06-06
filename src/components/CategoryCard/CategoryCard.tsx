@@ -13,7 +13,22 @@ function CategoryCard({ category }: CategoryCardProps) {
         const target = e.target as HTMLElement;
         e.stopPropagation();
         if (e.currentTarget === target || e.target instanceof HTMLImageElement) {
-            navigate(`/dish/${id}`);
+            if (
+                category.is_about ||
+                category.is_constructr ||
+                category.is_collagen ||
+                category.is_coffe ||
+                category.is_tea ||
+                category.is_drink ||
+                category.is_bar ||
+                category.is_smuzi ||
+                category.is_wine ||
+                category.is_sale
+            ) {
+                navigate(category.link);
+            } else {
+                navigate(`/dish/${category.id}`);
+            }
         }
     };
     if (!category.id) {

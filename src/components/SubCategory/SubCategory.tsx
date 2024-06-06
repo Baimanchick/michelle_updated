@@ -3,12 +3,9 @@ import getSubCategoryTitleByLanguage from '../../helpers/functions/getSubCategor
 
 function SubCategory({ subcategory }: SubCategoryProps) {
 
-
-
     return (
         <div>
             <h1>{getSubCategoryTitleByLanguage(subcategory)}</h1>
-
         </div>
     )
 }

@@ -14,6 +14,7 @@ function DishPage() {
         dispatch(fetchOneSubCateogory(numberId));
     }, [dispatch, numberId]);
 
+    console.log(subcategory);
 
 
     return (
@@ -21,7 +22,6 @@ function DishPage() {
             {subcategory.map((item: any, index: number) => (
                 <SubCategory key={index} subcategory={item} />
             ))}
-
         </div>
     );
 }

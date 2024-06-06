@@ -1,0 +1,26 @@
+// import { useNavigate } from "react-router-dom";
+// import { CategoryType } from "../interfaces/categories.interface";
+
+// const navigateToHisPage = (
+//   category: CategoryType,
+//   navigate: ReturnType<typeof useNavigate>
+// ) => {
+//   if (
+//     category.is_about ||
+//     category.is_constructr ||
+//     category.is_collagen ||
+//     category.is_coffe ||
+//     category.is_tea ||
+//     category.is_drink ||
+//     category.is_bar ||
+//     category.is_smuzi ||
+//     category.is_wine ||
+//     category.is_sale
+//   ) {
+//     navigate(category.link);
+//   } else {
+//     navigate(`/dish/${category.id}`);
+//   }
+// };
+
+// export default navigateToHisPage;

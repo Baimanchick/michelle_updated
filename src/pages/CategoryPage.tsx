@@ -16,10 +16,11 @@ const CategoryPage = () => {
 
     const sortedCategories = sortCategoriesById(categories);
 
-
     useEffect(() => {
         dispatch(fetchCategory());
     }, [dispatch]);
+
+
 
     return (
         <div>
