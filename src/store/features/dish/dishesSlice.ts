@@ -5,44 +5,57 @@ import { AxiosError } from "axios";
 import { DishesType } from "../../../helpers/interfaces/dishes.interface";
 
 interface DishState {
-  dish: DishesType[];
+  dishesBySubcategory: { [subcategoryId: number]: DishesType[] };
 }
 
 const initialState: DishState = {
-  dish: [],
+  dishesBySubcategory: {},
 };
 
 const dishSlice = createSlice({
   name: "dish",
   initialState,
   reducers: {
-    setDish: (state, action: PayloadAction<{ dish: DishesType[] }>) => {
-      state.dish = action.payload.dish;
+    setDish: (
+      state,
+      action: PayloadAction<{ subcategoryId: number; dishes: DishesType[] }>
+    ) => {
+      state.dishesBySubcategory[action.payload.subcategoryId] =
+        action.payload.dishes;
+    },
+    resetDishes: (state) => {
+      state.dishesBySubcategory = {};
     },
   },
 });
 
 export const fetchDish = createAsyncThunk<
-  { dish: DishesType[] },
+  { subcategoryId: number; dishes: DishesType[] },
   number,
   { rejectValue: unknown }
->("category/fetchDish", async (id, { dispatch, rejectWithValue }) => {
-  try {
-    const response = await $axios.get(`${API_URL}/subcategories/${id}/dishes/`);
-    const data: { dish: DishesType[] } = {
-      dish: response.data,
-    };
-    dispatch(dishSlice.actions.setDish(data));
-    return data;
-  } catch (error) {
-    if (error instanceof AxiosError) {
-      return rejectWithValue(
-        error.response?.data?.message || "Failed to fetch dish"
+>(
+  "category/fetchDish",
+  async (subcategoryId, { dispatch, rejectWithValue }) => {
+    try {
+      const response = await $axios.get(
+        `${API_URL}/subcategories/${subcategoryId}/dishes/`
       );
+      const data: { subcategoryId: number; dishes: DishesType[] } = {
+        subcategoryId,
+        dishes: response.data,
+      };
+      dispatch(dishSlice.actions.setDish(data));
+      return data;
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        return rejectWithValue(
+          error.response?.data?.message || "Failed to fetch dishes"
+        );
+      }
+      throw error;
     }
-    throw error;
   }
-});
+);
 
-export const { setDish } = dishSlice.actions;
+export const { setDish, resetDishes } = dishSlice.actions;
 export default dishSlice.reducer;

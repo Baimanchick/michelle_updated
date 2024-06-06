@@ -52,8 +52,6 @@ export const fetchOneSubCateogory = createAsyncThunk<
       const data: { oneSubCategory: SubCategoryType[] } = {
         oneSubCategory: response.data,
       };
-      console.log(data);
-
       dispatch(oneSubCategorySlice.actions.setOneSubCategory(data));
       return data;
     } catch (error) {
