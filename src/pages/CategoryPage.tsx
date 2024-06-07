@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { RootState } from '../store/store';
 import { fetchCategory } from '../store/features/category/categoriesSlice';
-import { CategoryType } from '../helpers/interfaces/categories.interface';
 import { useAppDispatch, useAppSelector } from '../hooks/hooks';
-import getCategoryTitleByLanguage from '../helpers/functions/getLanguagesTitle/getCategoryTitleByLanguage';
 import CategoryList from '../components/CategoryList/CategoryList';
 import { Flex } from 'antd';
 

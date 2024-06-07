@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 function CategoryCard({ category }: CategoryCardProps) {
     const navigate = useNavigate()
     const navigateToDetail = (
-        e: React.MouseEvent<HTMLDivElement>,
+        e: React.MouseEvent<HTMLElement>,
         id: number
     ) => {
         const target = e.target as HTMLElement;
@@ -44,7 +44,7 @@ function CategoryCard({ category }: CategoryCardProps) {
             className={styles.CardCustom}
             onClick={(e) => navigateToDetail(e, category.id)}
         >
-            <Flex className={styles.TitleFlex} >
+            <Flex onClick={(e) => navigateToDetail(e, category.id)} className={styles.TitleFlex} >
                 <div className={styles.CustomTitle}>{getCategoryTitleByLanguage(category)}</div>
             </Flex>
         </Card>
