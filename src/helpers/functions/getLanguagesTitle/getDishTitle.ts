@@ -1,4 +1,4 @@
-import { DishesType } from "../interfaces/dishes.interface";
+import { DishesType } from "../../interfaces/dishes.interface";
 import { getSelectedLanguage } from "./getSelectedLanguage";
 
 const getDishTitle = (dish: DishesType) => {

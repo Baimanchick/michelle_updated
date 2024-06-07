@@ -1,4 +1,4 @@
-import { SubCategoryType } from "../interfaces/categories.interface";
+import { SubCategoryType } from "../../interfaces/categories.interface";
 import { getSelectedLanguage } from "./getSelectedLanguage";
 
 const getSubCategoryTitleByLanguage = (subCategory: SubCategoryType) => {

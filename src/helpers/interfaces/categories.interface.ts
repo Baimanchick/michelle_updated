@@ -25,9 +25,21 @@ export interface SubCategoryType {
   category_id?: number;
   image: string;
   number: number;
+  main_title_ru: string;
+  main_title_tu: string;
+  main_title_kg: string;
+  main_title_en: string;
   title_ru: string;
   title_tu: string;
   title_kg: string;
   title_en: string;
+  custom_orange_ru: string;
+  custom_orange_kg: string;
+  custom_orange_tu: string;
+  custom_orange_en: string;
+  custom_black_ru: string;
+  custom_black_kg: string;
+  custom_black_tu: string;
+  custom_black_en: string;
   link: string;
 }

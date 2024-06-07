@@ -1,15 +1,13 @@
 import { Card, Flex } from 'antd'
 import { DishCardProps } from './DishCardProps.props'
 import styles from "./dishCard.module.scss"
-import getDishTitle from '../../helpers/functions/getDishTitle'
+import getDishTitle from '../../helpers/functions/getLanguagesTitle/getDishTitle'
 import { formatNumberAndAddCurrency } from '../../helpers/functions/helperFunctions'
-import { getSelectedLanguage } from '../../helpers/functions/getSelectedLanguage'
+import { getSelectedLanguage } from '../../helpers/functions/getLanguagesTitle/getSelectedLanguage'
 import getDishText from '../../helpers/functions/getDishText'
 
 function DishCard({ dish }: DishCardProps) {
     const selectedLanguage = getSelectedLanguage()
-    console.log(dish);
-
 
     return (
         <Card
@@ -26,9 +24,9 @@ function DishCard({ dish }: DishCardProps) {
             <Flex style={{ flexDirection: 'column', }}>
                 <div className={styles.white_block}></div>
                 <h2 className={styles.title}>{getDishTitle(dish)}</h2>
-                <div className={styles.weight}>{formatNumberAndAddCurrency(dish.number, `${selectedLanguage === 'Русский' || 'Кыргызча' ? 'г' : 'g'}`)}</div>
+                <div className={styles.weight}>{formatNumberAndAddCurrency(dish.weight, `${selectedLanguage === 'Русский' || 'Кыргызча' ? 'г' : 'g'}`)}</div>
                 <p className={styles.text}>{getDishText(dish)}</p>
-                <Flex style={{ marginTop: 5 }} justify={'space-between'} >
+                <Flex style={{ marginTop: 5 }} align={'center'} justify={'space-between'} >
                     <Flex gap={4}>
                         {dish.svg_urls.map((svg: any, index: number) => (
                             <img className={styles.svg} src={svg.svg} key={index} />

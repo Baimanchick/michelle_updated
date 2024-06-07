@@ -1,32 +1,16 @@
 import React from "react";
-import { List } from "antd";
+import { Flex } from "antd";
 import { DishListProps } from "./DishListProp.props";
 import DishCard from "../DishCard/DishCard";
 import { DishesType } from "../../helpers/interfaces/dishes.interface";
 
-function DishList({ dish, grid }: DishListProps) {
+function DishList({ dish }: DishListProps) {
     return (
-        <List
-            size={"small"}
-            grid={grid}
-            loading={!dish}
-            dataSource={dish}
-            renderItem={(item: DishesType) => (
-                <List.Item
-                    key={item.id}
-                    style={{
-                        background: "transparent",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        gap: "10px",
-                        padding: 0,
-                    }}
-                >
-                    <DishCard dish={item} />
-                </List.Item>
-            )}
-        />
+        <Flex style={{ flexWrap: 'wrap', justifyContent: 'space-between', marginTop: 10, marginBottom: 10 }} gap={15}>
+            {dish.map((item: DishesType, index: number) => (
+                <DishCard key={index} dish={item} />
+            ))}
+        </Flex>
     );
 }
 

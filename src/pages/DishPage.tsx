@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { fetchOneSubCateogory, setOneSubCategory } from "../store/features/category/oneSubCategory";
 import { fetchDish, resetDishes } from "../store/features/dish/dishesSlice";
 import SubCategory from "../components/SubCategory/SubCategory";
-import DishList from "../components/DishList/DishList";
 import DishCard from "../components/DishCard/DishCard";
+import DishList from "../components/DishList/DishList";
+import Loading from "../components/Loading/Loading";
 
 function DishPage() {
     const { id } = useParams();
@@ -41,7 +42,7 @@ function DishPage() {
     return (
         <div style={{ padding: 20 }}>
             {loading ? (
-                <div>Loading...</div>
+                <Loading />
             ) : (
                 subcategories.map((subcategory, index) => (
                     <div key={index}>
@@ -50,16 +51,6 @@ function DishPage() {
                             <>
                                 <DishList
                                     dish={dishesBySubcategory[subcategory.id]}
-                                    grid={{
-                                        gutter: 10,
-                                        column: 2,
-                                        xxl: 2,
-                                        xl: 2,
-                                        lg: 2,
-                                        md: 2,
-                                        sm: 2,
-                                        xs: 2,
-                                    }}
                                 />
                             </>
                         )}

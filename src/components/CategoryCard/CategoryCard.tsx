@@ -1,5 +1,5 @@
 import { Card, Flex, Typography } from "antd"
-import getCategoryTitleByLanguage from "../../helpers/functions/getCategoryTitleByLanguage"
+import getCategoryTitleByLanguage from "../../helpers/functions/getLanguagesTitle/getCategoryTitleByLanguage"
 import { CategoryCardProps } from "./CategoryCard.props"
 import styles from "./categoryCard.module.scss"
 import { useNavigate } from "react-router-dom"

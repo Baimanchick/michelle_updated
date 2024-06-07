@@ -1,4 +1,4 @@
-import { CategoryType } from "../interfaces/categories.interface";
+import { CategoryType } from "../../interfaces/categories.interface";
 import { getSelectedLanguage } from "./getSelectedLanguage";
 
 const getCategoryTitleByLanguage = (category: CategoryType) => {

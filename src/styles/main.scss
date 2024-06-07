@@ -45,3 +45,7 @@ a {
     height: 100vh;
     padding: 30px 0px 30px 0px;
 }
+
+:where(.css-dev-only-do-not-override-j9bb5n).ant-spin .ant-spin-dot-item {
+    background-color: #E1A304 !important;
+}
