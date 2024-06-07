@@ -10,6 +10,10 @@ export interface DishesType {
   text_kg: string;
   text_tu: string;
   text_en: string;
+  advice_ru: string;
+  advice_kg: string;
+  advice_tu: string;
+  advice_en: string;
   price: number;
   weight: number;
   number: number;

@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { fetchOneSubCateogory, setOneSubCategory } from "../store/features/category/oneSubCategory";
 import { fetchDish, resetDishes } from "../store/features/dish/dishesSlice";
 import SubCategory from "../components/SubCategory/SubCategory";
-import DishCard from "../components/DishCard/DishCard";
 import DishList from "../components/DishList/DishList";
 import Loading from "../components/Loading/Loading";
+import SliderMenu from "../components/SliderMenu/SliderMenu";
 
 function DishPage() {
     const { id } = useParams();
@@ -39,23 +39,29 @@ function DishPage() {
         };
     }, [dispatch, numberId]);
 
+
+
     return (
-        <div style={{ padding: 20 }}>
+        <div style={{ padding: 20, marginBottom: 45 }}>
             {loading ? (
                 <Loading />
             ) : (
-                subcategories.map((subcategory, index) => (
-                    <div key={index}>
-                        <SubCategory subcategory={subcategory} />
-                        {dishesBySubcategory[subcategory.id] && (
-                            <>
-                                <DishList
-                                    dish={dishesBySubcategory[subcategory.id]}
-                                />
-                            </>
-                        )}
-                    </div>
-                ))
+                <>
+                    {subcategories.map((subcategory, index) => (
+                        <div key={index}>
+                            <SubCategory subcategory={subcategory} />
+                            {dishesBySubcategory[subcategory.id] && (
+                                <>
+                                    <DishList
+                                        dish={dishesBySubcategory[subcategory.id]}
+                                    />
+                                </>
+                            )}
+                        </div>
+                    ))}
+                    <SliderMenu />
+                </>
+
             )}
         </div>
     );

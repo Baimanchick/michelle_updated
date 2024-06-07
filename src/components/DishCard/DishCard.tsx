@@ -4,7 +4,7 @@ import styles from "./dishCard.module.scss"
 import getDishTitle from '../../helpers/functions/getLanguagesTitle/getDishTitle'
 import { formatNumberAndAddCurrency } from '../../helpers/functions/helperFunctions'
 import { getSelectedLanguage } from '../../helpers/functions/getLanguagesTitle/getSelectedLanguage'
-import getDishText from '../../helpers/functions/getDishText'
+import getDishText from '../../helpers/functions/getLanguagesTitle/getDishText'
 
 function DishCard({ dish }: DishCardProps) {
     const selectedLanguage = getSelectedLanguage()

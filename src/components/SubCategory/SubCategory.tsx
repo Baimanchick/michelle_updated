@@ -7,7 +7,6 @@ import getSubCategoryOrangeTitle from '../../helpers/functions/getLanguagesTitle
 import getSubCategoryBalckTitle from '../../helpers/functions/getLanguagesTitle/getSubCategoryBalckTitle';
 
 function SubCategory({ subcategory }: SubCategoryProps) {
-    console.log(subcategory);
 
     return (
         <Flex style={{ flexDirection: 'column', width: '100%', height: 'auto' }} gap={4.5} justify={'center'} align={'center'}>
