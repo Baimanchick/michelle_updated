@@ -7,6 +7,7 @@ import SubCategory from "../components/SubCategory/SubCategory";
 import DishList from "../components/DishList/DishList";
 import Loading from "../components/Loading/Loading";
 import SliderMenu from "../components/SliderMenu/SliderMenu";
+import ArrowLeft from "../components/Arrow/ArrowLeft";
 
 function DishPage() {
     const { id } = useParams();
@@ -60,6 +61,7 @@ function DishPage() {
                         </div>
                     ))}
                     <SliderMenu />
+                    <ArrowLeft />
                 </>
 
             )}
