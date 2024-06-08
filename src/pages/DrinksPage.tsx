@@ -21,7 +21,6 @@ function DrinksPage() {
                 <span>ГОРЯЧИЙ МИКС</span>
               </div>
             </header>
-            {/* <img className="coffe-img-2" src={imgTerRU} alt="" /> */}
             <>
               <TeaSquare
                 style={{ backgroundColor: "#FEEABCE5" }}
