@@ -8,6 +8,7 @@ import getSubCategoryBalckTitle from '../../helpers/functions/getLanguagesTitle/
 
 function SubCategory({ subcategory }: SubCategoryProps) {
 
+
     return (
         <Flex style={{ flexDirection: 'column', width: '100%', height: 'auto' }} gap={4.5} justify={'center'} align={'center'}>
             <div>

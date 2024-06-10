@@ -27,12 +27,12 @@ function DishCard({ dish }: DishCardProps) {
                 <div className={styles.weight}>{formatNumberAndAddCurrency(dish.weight, `${selectedLanguage === 'Русский' || 'Кыргызча' ? 'г' : 'g'}`)}</div>
                 <p className={styles.text}>{getDishText(dish)}</p>
                 <Flex style={{ marginTop: 5 }} align={'center'} justify={'space-between'} >
-                    <Flex gap={4}>
+                    <Flex >
                         {dish.svg_urls.map((svg: any, index: number) => (
                             <img className={styles.svg} src={svg.svg} key={index} />
                         ))}
                     </Flex>
-                    <div className={styles.price}>{formatNumberAndAddCurrency(dish.price, `${selectedLanguage === 'Русский' || 'Кыргызча' ? 'сом' : 'som'}`)}</div>
+                    <div className={styles.price}>{formatNumberAndAddCurrency(dish.price, `${selectedLanguage === 'Русский' || 'Кыргызча' ? 'сом' : 'kgs'}`)}</div>
                 </Flex>
             </Flex>
         </Card>

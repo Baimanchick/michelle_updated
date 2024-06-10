@@ -1364,7 +1364,459 @@ function DrinksPage() {
             </>
           </div>
         ) : selectedLanguage === "Кыргызча" ? (
-          <div></div>
+          <>
+          <div className="drinks-main">
+            <header className="tea-header">
+              <div className="tea-header-title">
+                <h2 style={{ fontSize: "38px" }}>СУУСУНДУКТАР</h2>
+                <span>ЫСЫК МИКС</span>
+              </div>
+            </header>
+            <>
+              <TeaSquare
+                style={{ backgroundColor: "#FEEABCE5" }}
+                title={"Раф матча"}
+                weight={"400 мл"}
+                price={"400 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FEEABCE5" }}
+                title={"Матча"}
+                weight={"400 мл"}
+                price={"300 с"}
+                extra={"көк / көгүлтүр"}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FEEABCE5" }}
+                title={"Какао"}
+                weight={"200 мл"}
+                price={"170/190 С"}
+                extra={"классикалык / бельгия шоколады негизинде"}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FEEABCE5" }}
+                title={"Глинтвейн"}
+                weight={"200 мл"}
+                price={"380 с"}
+                extra={"кызыл / ак"}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FEEABCE5" }}
+                title={"Глинтвейн алкоголсуз"}
+                weight={"200 мл"}
+                price={"210 с"}
+                extra={"алча / алма / анар"}
+              />
+              <div
+                style={{ margin: "35px 0px 35px 0px" }}
+                className="collagen-main-2"
+              >
+                <div className="collagen-container-2">
+                  <div className="collagen-wrapper-left">
+                    <div>+ маршмеллоу</div>
+                  </div>
+                  <div className="collagen-wrapper-right">+30 с</div>
+                </div>
+              </div>
+              <header className="tea-header">
+                <div className="tea-header-title">
+                  <span>ҮЙ ЛИМОНАДДАРЫ</span>
+                </div>
+              </header>
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Классикалык"}
+                weight={"400 мл/1л"}
+                price={"190/290 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Тропикалык"}
+                weight={"400 мл/1л"}
+                price={"230/400 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Алмурут-лимон"}
+                weight={"400 мл/1л"}
+                price={"230/330 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Алма-киви"}
+                weight={"400 мл/1л"}
+                price={"230/330 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Мохито"}
+                weight={"400 мл/1л"}
+                price={"230/330 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Фирмалык Мишель"}
+                weight={"400 мл/1л"}
+                price={"280/450 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Дан куурай менен"}
+                weight={"400 мл/1л"}
+                price={"280/450 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Алча менен"}
+                weight={"400 мл/1л"}
+                price={"280/450 с"}
+                extra={"280/450 с"}
+              />
+              <div
+                style={{ margin: "35px 0px 35px 0px" }}
+                className="collagen-main-2"
+              >
+                <div className="collagen-container-2">
+                  <div className="collagen-wrapper-left">
+                    <div>
+                      *Суусундуктун көлөмү муздун болушун эске алуу менен
+                      көрсөтүлөт
+                    </div>
+                  </div>
+                  <div className="collagen-wrapper-right"></div>
+                </div>
+              </div>
+              <header className="tea-header">
+                <div className="tea-header-title">
+                  <span>БЕЛЬГИЯ ЫСЫК ШОКОЛАДЫ</span>
+                </div>
+              </header>
+              <TeaSquare
+                style={{ backgroundColor: "#FEEABCE5" }}
+                title={"Классикалык"}
+                weight={"200 мл"}
+                price={"260 C"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FEEABCE5" }}
+                title={"Дарк Оранж"}
+                weight={"200 мл"}
+                price={"260 C"}
+                extra={""}
+              />
+              <div
+                style={{ margin: "35px 0px 35px 0px" }}
+                className="collagen-main-2"
+              >
+                <div className="collagen-container-2">
+                  <div className="collagen-wrapper-left">
+                    <div>
+                      Суусундуктарыбызда биз эксклюзив колдонобуз табигый
+                      бельгиялык шоколад, табигый 33% крем жана порошок
+                      алмаштыргычтар жок!
+                    </div>
+                  </div>
+                  <div className="collagen-wrapper-right"></div>
+                </div>
+              </div>
+              <header className="tea-header">
+                <div className="tea-header-title">
+                  <span>Дем берүүчү суу</span>
+                </div>
+              </header>
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Легенда булак суусу"}
+                weight={"1 л"}
+                price={"70 С"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Витаминдүү суу лимон+бадыраң"}
+                weight={"1 л"}
+                price={"160 С"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Витаминдүү суу лайм+жалбыз"}
+                weight={"1 л"}
+                price={"170 С"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Витаминдүү суу  розмарин+имбирь"}
+                weight={"1 л"}
+                price={"170 С"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Лимондуу суу"}
+                weight={"1 л"}
+                price={"160 С"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"BonAqua"}
+                weight={"300 л"}
+                price={"70"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Боржоми"}
+                weight={"500 л"}
+                price={"200 С"}
+                extra={""}
+              />
+              <header
+                style={{ margin: "35px 0px 35px 0px" }}
+                className="tea-header"
+              >
+                <div className="tea-header-title">
+                  <span>ФРЕШТЕР</span>
+                </div>
+              </header>
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Сабиз"}
+                weight={"250 мл"}
+                price={"160 С"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Алма"}
+                weight={"250 мл"}
+                price={"160 С"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Алма-сабиз"}
+                weight={"250 мл"}
+                price={"160 С"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Апельсин"}
+                weight={"250 мл"}
+                price={"310 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Апельсин-алма"}
+                weight={"250 мл"}
+                price={"260 с"}
+                extra={""}
+              />
+              <header
+                style={{ margin: "35px 0px 35px 0px" }}
+                className="tea-header"
+              >
+                <div className="tea-header-title">
+                  <span>ФРИКШЕЙКТЕР</span>
+                </div>
+              </header>
+              <TeaSquare
+                style={{ backgroundColor: "#FED5CAB2 " }}
+                title={"Кулпунайлуу кыял"}
+                weight={"300 мл"}
+                price={"360 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FED5CAB2 " }}
+                title={"Банан бум"}
+                weight={"300 мл"}
+                price={"360 с"}
+                extra={""}
+              />
+              <header
+                style={{ margin: "35px 0px 35px 0px" }}
+                className="tea-header"
+              >
+                <div className="tea-header-title">
+                  <span>ДЕТОКС</span>
+                </div>
+              </header>
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Шпинат-киви"}
+                weight={"250 мл"}
+                price={"170 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Тропикалык"}
+                weight={"250 мл"}
+                price={"280 с"}
+                extra={""}
+              />
+              <header
+                style={{ margin: "35px 0px 35px 0px" }}
+                className="tea-header"
+              >
+                <div className="tea-header-title">
+                  <span>МИЛКШЕЙКТЕР</span>
+                </div>
+              </header>
+              <TeaSquare
+                style={{ backgroundColor: "#FED5CAB2" }}
+                title={"Кулпунайлуу крекер"}
+                weight={"300 мл"}
+                price={"300 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FED5CAB2" }}
+                title={"Манго"}
+                weight={"300 мл"}
+                price={"300 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FED5CAB2" }}
+                title={"Банан"}
+                weight={"300 мл"}
+                price={"300 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FED5CAB2" }}
+                title={"Шоколад"}
+                weight={"300 мл"}
+                price={"300 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FED5CAB2" }}
+                title={"Шоколад и банан"}
+                weight={"300 мл"}
+                price={"300 с"}
+                extra={""}
+              />
+              <header
+                style={{ margin: "35px 0px 35px 0px" }}
+                className="tea-header"
+              >
+                <div className="tea-header-title">
+                  <span>ЛАКТОЗАСЫЗ МИЛКШЕЙКТЕР</span>
+                </div>
+              </header>
+              <TeaSquare
+                style={{ backgroundColor: "#FEEABCE5" }}
+                title={"Манго"}
+                weight={"300 мл"}
+                price={"310 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FEEABCE5" }}
+                title={"Жаңгак менен"}
+                weight={"300 мл"}
+                price={"310 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FEEABCE5" }}
+                title={"Кокос и клубника"}
+                weight={"300 мл"}
+                price={"310 с"}
+                extra={""}
+              />
+              <header
+                style={{ margin: "35px 0px 35px 0px" }}
+                className="tea-header"
+              >
+                <div className="tea-header-title">
+                  <span>САЛКЫНДАТУУЧУ СУУСУНДУКТАР</span>
+                </div>
+              </header>
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Gracio ширеси"}
+                weight={"250 мл/1 л"}
+                price={"90/310 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Кока-Кола/Фанта"}
+                weight={"250 мл"}
+                price={"130 с"}
+                extra={"айнек"}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Кока-Кола"}
+                weight={"250 мл/1 л"}
+                price={"90/170 с"}
+                extra={"куюу"}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Швепс"}
+                weight={"330 мл"}
+                price={"105 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#E6EBDC99" }}
+                title={"Red Bull"}
+                weight={"250 мл"}
+                price={"260 с"}
+                extra={""}
+              />
+
+              <header
+                style={{ margin: "35px 0px 35px 0px" }}
+                className="tea-header"
+              >
+                <div className="tea-header-title">
+                  <span>СМУЗИ</span>
+                </div>
+              </header>
+              <TeaSquare
+                style={{ backgroundColor: "#FED5CAB2" }}
+                title={"Ягодный"}
+                weight={"300 мл"}
+                price={"240 C"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FED5CAB2" }}
+                title={"Манго жана апельсин"}
+                weight={"300 мл"}
+                price={"290 с"}
+                extra={""}
+              />
+              <TeaSquare
+                style={{ backgroundColor: "#FED5CAB2" }}
+                title={"Бифидо"}
+                weight={"250 мл"}
+                price={"260 C"}
+                extra={""}
+              />
+            </>
+          </div>
+        </>
         ) : null}
       </div>
     </>

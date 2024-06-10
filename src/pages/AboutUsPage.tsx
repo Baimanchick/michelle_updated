@@ -374,7 +374,6 @@ function AboutUsPage() {
                         </div>
                     </>
                 ) : null}
-
             </div>
         </>
     );

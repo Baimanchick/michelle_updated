@@ -40,7 +40,7 @@ function DishPage() {
         };
     }, [dispatch, numberId]);
 
-
+    const sortedSubcategories = [...subcategories].sort((a, b) => a.id - b.id);
 
     return (
         <div style={{ padding: 20, marginBottom: 45 }}>
@@ -48,7 +48,7 @@ function DishPage() {
                 <Loading />
             ) : (
                 <>
-                    {subcategories.map((subcategory, index) => (
+                    {sortedSubcategories.map((subcategory, index) => (
                         <div key={index}>
                             <SubCategory subcategory={subcategory} />
                             {dishesBySubcategory[subcategory.id] && (
@@ -63,7 +63,6 @@ function DishPage() {
                     <SliderMenu />
                     <ArrowLeft />
                 </>
-
             )}
         </div>
     );
