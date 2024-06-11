@@ -24,7 +24,7 @@ function DishCard({ dish }: DishCardProps) {
             <Flex style={{ flexDirection: 'column', }}>
                 <div className={styles.white_block}></div>
                 <h2 className={styles.title}>{getDishTitle(dish)}</h2>
-                <div className={styles.weight}>{formatNumberAndAddCurrency(dish.weight, `${selectedLanguage === 'Русский' || 'Кыргызча' ? 'г' : 'g'}`)}</div>
+                <div className={styles.weight}>{dish.weight === 0 ? null : formatNumberAndAddCurrency(dish.weight, '')} {selectedLanguage === 'Русский' || selectedLanguage === 'Кыргызча' ? 'г' : 'g'}</div>
                 <p className={styles.text}>{getDishText(dish)}</p>
                 <Flex style={{ marginTop: 5 }} align={'center'} justify={'space-between'} >
                     <Flex >
@@ -32,7 +32,7 @@ function DishCard({ dish }: DishCardProps) {
                             <img className={styles.svg} src={svg.svg} key={index} />
                         ))}
                     </Flex>
-                    <div className={styles.price}>{formatNumberAndAddCurrency(dish.price, `${selectedLanguage === 'Русский' || 'Кыргызча' ? 'сом' : 'kgs'}`)}</div>
+                    <div className={styles.price}>{formatNumberAndAddCurrency(dish.price, `${selectedLanguage === 'Русский' || selectedLanguage === 'Кыргызча' ? 'сом' : 'kgs'}`)}</div>
                 </Flex>
             </Flex>
         </Card>

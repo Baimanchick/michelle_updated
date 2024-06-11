@@ -2,6 +2,7 @@ import ArrowLeft from "../components/Arrow/ArrowLeft";
 import "../styles/constructor.scss";
 import { getSelectedLanguage } from "../helpers/functions/getLanguagesTitle/getSelectedLanguage";
 import imgContr from "../assets/constructor/CE3A1638_plate 3 (16).png";
+import SliderMenu from "../components/SliderMenu/SliderMenu";
 
 function ConstructorPage() {
     const selectedLanguage = getSelectedLanguage()
@@ -10,6 +11,7 @@ function ConstructorPage() {
         <>
             <div className="menu-main-content" style={{ zIndex: 2 }}>
                 <ArrowLeft />
+                <SliderMenu />
                 {selectedLanguage === "Русский" ? (
                     <>
                         <div className="drinks-main" style={{ zIndex: 2 }}>

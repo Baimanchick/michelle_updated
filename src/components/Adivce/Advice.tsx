@@ -11,9 +11,6 @@ function Advice({ dish }: AdviceProps) {
         return null;
     }
 
-    console.log(dish);
-
-
     return (
         <div className={styles.adviceMain}>
             <div className={styles.adviceContainer}>

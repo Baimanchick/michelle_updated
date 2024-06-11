@@ -16,7 +16,7 @@ function ScrollToTop() {
 
 function MainLayout() {
     const width = useWindowSize();
-    const isMobile = width.width && width.width < 760;
+    const isMobile = width.width && width.width < 900;
     return (
         isMobile ? (
             <>
