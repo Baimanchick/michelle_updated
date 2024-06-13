@@ -14,6 +14,8 @@ const DrinksPage = lazy(() => import("../pages/DrinksPage"));
 const BarPage = lazy(() => import("../pages/BarPage"));
 const SmuziPage = lazy(() => import("../pages/SmuziPage"));
 const WinePage = lazy(() => import("../pages/WinePage"));
+const DiscountPage = lazy(() => import("../pages/DiscountPage"));
+
 
 
 function MainRoutes() {
@@ -32,6 +34,8 @@ function MainRoutes() {
                 <Route path='/bar' element={<BarPage />} />
                 <Route path='/smuzi' element={<SmuziPage />} />
                 <Route path='/wine' element={<WinePage />} />
+                <Route path='/discount' element={<DiscountPage />} />
+
             </Route>
         </Routes>
     )
